@@ -18,6 +18,10 @@ pipeline {
              steps { 
                 sh 'echo "This is hotfix branch"'
             }
+        stage("Test_02") { 
+             steps { 
+                sh 'echo "This is Test branch"'
+            }
         }  
     }
 }
