@@ -1,22 +1,23 @@
-pipline {
-	agent any
-	stages {
-	   stage('Master') {
-		steps {
-		sh 'echo "This is master branch"'
-		}
-	   }
+pipeline {   
+    agent any
 
-	   stage('development') {
-		steps {
-		sh 'echo "This is development branch"'
-		}
-	   }
+    stages {   
+        stage('Master') { 
+            steps { 
+               sh 'echo "This is master branch"' 
+            }
+        }
+     
+        stage('development') { 
+            steps { 
+               sh 'echo "This is development branch"'
+            }
+        }
 
-	   stage('Hotfix') {
-		steps {
-		sh 'echo "This is hotfix branch"'
-		}
-	   }
-	}
+        stage("hotfix") { 
+             steps { 
+                sh 'echo "This is hotfix branch"'
+            }
+        }  
+    }
 }
